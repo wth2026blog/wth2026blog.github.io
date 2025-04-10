@@ -176,7 +176,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-04-08 20:05:33" itemprop="dateModified" datetime="2025-04-08T20:05:33+08:00">2025-04-08</time>
+                <time title="修改时间：2025-04-10 19:58:49" itemprop="dateModified" datetime="2025-04-10T19:58:49+08:00">2025-04-10</time>
               </span>
 
           
@@ -210,7 +210,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/04/10/6499/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/04/10/sbcomplex/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -224,7 +224,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2025/04/10/6499/" class="post-title-link" itemprop="url">6499的传说</a>
+            <a href="/2025/04/10/sbcomplex/" class="post-title-link" itemprop="url">慎用STL complex</a>
         </h2>
 
         <div class="post-meta">
@@ -235,7 +235,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2025-04-10 19:39:43 / 修改时间：19:41:08" itemprop="dateCreated datePublished" datetime="2025-04-10T19:39:43+08:00">2025-04-10</time>
+              <time title="创建时间：2025-04-10 19:59:15 / 修改时间：19:58:49" itemprop="dateCreated datePublished" datetime="2025-04-10T19:59:15+08:00">2025-04-10</time>
             </span>
 
           
@@ -249,8 +249,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>某人做题，试图暴力卡过去，然后……<br><img src="https://cdn.luogu.com.cn/upload/image_hosting/n4yvuee8.png"></p>
-<p>这告诉我们，卡常，即使1ms，也要好好卡&#x2F;kl</p>
+          <p><del>我操他马几把的傻逼玄学STL complex……</del></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_Cmplx[j + k] += __ * _Cmplx[i + j + k];</span><br><span class="line">_Cmplx[i + j + k] = _Cmplx[j + k] - complex &lt;<span class="type">double</span>&gt; (<span class="number">2</span>, <span class="number">0</span>) * __ * _Cmplx[i + j + k];</span><br></pre></td></tr></table></figure>
+<p>它 TLE 了</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">complex&lt;<span class="type">double</span>&gt; x = _Cmplx[j + k], y = __ * _Cmplx[i + j + k];</span><br><span class="line">_Cmplx[j + k] = x + y;</span><br><span class="line">_Cmplx[i + j + k] = x - y;</span><br></pre></td></tr></table></figure>
+<p>他过了……</p>
+<p><del>什么神经常数啊我靠……</del></p>
 
       
     </div>
@@ -295,7 +299,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2025-04-10 14:35:00 / 修改时间：14:37:48" itemprop="dateCreated datePublished" datetime="2025-04-10T14:35:00+08:00">2025-04-10</time>
+              <time title="创建时间：2025-04-10 19:59:15 / 修改时间：19:58:49" itemprop="dateCreated datePublished" datetime="2025-04-10T19:59:15+08:00">2025-04-10</time>
             </span>
 
           
@@ -331,7 +335,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/04/09/sbcomplex/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/04/10/dmmb/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -345,7 +349,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2025/04/09/sbcomplex/" class="post-title-link" itemprop="url">慎用STL complex</a>
+            <a href="/2025/04/10/dmmb/" class="post-title-link" itemprop="url">代码模板</a>
         </h2>
 
         <div class="post-meta">
@@ -356,71 +360,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2025-04-09 21:14:03 / 修改时间：21:20:25" itemprop="dateCreated datePublished" datetime="2025-04-09T21:14:03+08:00">2025-04-09</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><del>我操他马几把的傻逼玄学STL complex……</del></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_Cmplx[j + k] += __ * _Cmplx[i + j + k];</span><br><span class="line">_Cmplx[i + j + k] = _Cmplx[j + k] - complex &lt;<span class="type">double</span>&gt; (<span class="number">2</span>, <span class="number">0</span>) * __ * _Cmplx[i + j + k];</span><br></pre></td></tr></table></figure>
-<p>它 TLE 了</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">complex&lt;<span class="type">double</span>&gt; x = _Cmplx[j + k], y = __ * _Cmplx[i + j + k];</span><br><span class="line">_Cmplx[j + k] = x + y;</span><br><span class="line">_Cmplx[i + j + k] = x - y;</span><br></pre></td></tr></table></figure>
-<p>他过了……</p>
-<p><del>什么神经常数啊我靠……</del></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/04/09/dmmb/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wth2026">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wth2026's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2025/04/09/dmmb/" class="post-title-link" itemprop="url">代码模板</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2025-04-09 14:33:55 / 修改时间：21:13:57" itemprop="dateCreated datePublished" datetime="2025-04-09T14:33:55+08:00">2025-04-09</time>
+              <time title="创建时间：2025-04-10 19:59:15 / 修改时间：19:58:49" itemprop="dateCreated datePublished" datetime="2025-04-10T19:59:15+08:00">2025-04-10</time>
             </span>
 
           
@@ -467,7 +407,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/04/08/thxqxxyj/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/04/10/bzywc/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -481,7 +421,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2025/04/08/thxqxxyj/" class="post-title-link" itemprop="url">田娃气走典典记</a>
+            <a href="/2025/04/10/bzywc/" class="post-title-link" itemprop="url">杨汶穿：七蜀中学的“暴君”老师——nxd_oxm</a>
         </h2>
 
         <div class="post-meta">
@@ -492,75 +432,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2025-04-08 21:30:00 / 修改时间：21:30:05" itemprop="dateCreated datePublished" datetime="2025-04-08T21:30:00+08:00">2025-04-08</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><del>鸽鸽鸽，下课再写。</del></p>
-<p>Upd: YHY：快点写，快点写，快点写……<br>Upd: YHY：好好写你的博客，不要发私信。</p>
-<p>周一是数竞外培回来的第一天，田娃由于去医院了第一节课没有来，这时候典典发现她的椅子非常晃，于是就把田娃的椅子换了一下。</p>
-<p>第二节课田娃来了，发现椅子非常晃，我于是就把典典换椅子的事情好心的告诉了他。他说：“没事，我不介意她和我换椅子，因为我在外培的时候做的对不起她的事情。”</p>
-<p>我问：“你做了啥事情啊？”这时候Actan26也把脑袋凑过来说：“啥啊，我也要听”</p>
-<p>田娃：“就是我们去外培的时候编了很多【睡前小故事】，然后我编了情节，吴大编了细节。男主是KCZ，女主就是她。”这番话被典典听到了。</p>
-<p>由于作者要回家吃饭，于是乎中午回来的时候，看见走廊上站这两拨人，左边是吴大和田娃，右边是班主任和典典（身高差距&amp;体型差距非常之……一点也不大）（高度疑似是典典告老师了）。</p>
-<p>过了一会儿，吴大和田娃走了回来，典典直接抄起东西跑到另外一个地方坐了。</p>
-<p>田娃：“我们的生存压力又小了很多。”（应为在那一圈5个人中，田娃经常买零食，然后被5个人瓜分，可以形象的称之为以一己之力养活5个人，典典走了之后，他就只用以一己之力养活4个人了）</p>
-<p>Upd：本文以第一人称视角写作，完全真实，0虚构内容。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/04/08/bzywc/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wth2026">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wth2026's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2025/04/08/bzywc/" class="post-title-link" itemprop="url">杨汶穿：七蜀中学的“暴君”老师——nxd_oxm</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2025-04-08 20:25:02 / 修改时间：20:53:45" itemprop="dateCreated datePublished" datetime="2025-04-08T20:25:02+08:00">2025-04-08</time>
+              <time title="创建时间：2025-04-10 19:59:15 / 修改时间：19:58:49" itemprop="dateCreated datePublished" datetime="2025-04-10T19:59:15+08:00">2025-04-10</time>
             </span>
 
           
@@ -616,7 +488,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/04/08/04bd/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/04/10/6499/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -630,7 +502,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2025/04/08/04bd/" class="post-title-link" itemprop="url">漆树中学OIER TYR_04意外感染04病毒，引发恐慌</a>
+            <a href="/2025/04/10/6499/" class="post-title-link" itemprop="url">6499的传说</a>
         </h2>
 
         <div class="post-meta">
@@ -641,7 +513,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2025-04-08 20:23:36 / 修改时间：20:24:25" itemprop="dateCreated datePublished" datetime="2025-04-08T20:23:36+08:00">2025-04-08</time>
+              <time title="创建时间：2025-04-10 19:59:15 / 修改时间：19:58:49" itemprop="dateCreated datePublished" datetime="2025-04-10T19:59:15+08:00">2025-04-10</time>
             </span>
 
           
@@ -655,21 +527,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><strong>零、引</strong></p>
-<p>在漆树中学，近日爆发了一起由“04病毒”引起的事件，主角是TYR_04，一名看似普通的学生。未曾想，他竟成为了这场突如其来的病毒传播的“源头”，而他自己却直到后来才意识到事情的严重性。TYR_04不仅成为了0号病人，还在短短三天内无意中传染了多名同学，引发了学校内部的恐慌与愤怒。</p>
-<p><strong>一、初始感染——一个无意的病毒源头</strong></p>
-<p>事情的开端十分普通。TYR_04原本只是漆树中学的一名普通学生，他参加了常规的学习和活动，生活看似平淡无奇。然而，不知从何时起，他在一次偶然的机会中感染了名为“04病毒”的病毒。据悉，这种病毒具有高度的传播性，但最初的症状非常轻微，类似感冒或过敏反应。TYR_04并没有过多在意，认为自己只是普通的生病，便没有及时就医。</p>
-<p><strong>二、病毒传播——不经意间的扩散</strong></p>
-<p>然而，问题并未就此结束。第一天，TYR_04并未意识到自己的病情有多严重，依旧照常上课、参加活动。他所在的机房是学校信息技术课程的学习场所，那里有着众多与他关系较好的同学。当时，他并没有特别注意到自己在无意中接触了周围的同学，也没有采取任何预防措施，继续与他们分享同一个学习空间。就这样，在一天内，他不经意间将病毒传染给了同机房的4名同学。</p>
-<p>到了第二天，病毒的传播效果更加明显。TYR_04的症状逐渐加重，但他依旧未曾自觉，并且并未采取隔离或就医措施。而他的4名同学也在短短24小时内迅速扩散病毒，他们又将病毒传染给了更多的同学。两天之后，感染人数已达到8人。到了第三天，感染人数突破了11人。病毒的传播速度让人瞠目结舌，学校的管理人员和师生们也开始感受到前所未有的压力。</p>
-<p><strong>三、引发愤怒——“0号病人”成了众矢之的</strong></p>
-<p>随着感染人数的增加，TYR_04渐渐引起了学校师生们的关注。他的病毒传播速度和范围令人震惊，而他自己却并未采取任何措施来阻止进一步扩散。学校的其他学生开始产生了强烈的不满和愤怒，他们指责TYR_04没有及时采取隔离，甚至在知晓自己感染后仍未向学校报告，这使得病毒迅速扩散，造成了不可控制的局面。</p>
-<p>在同学们的愤怒中，学校的管理层也开始高度重视此事，迅速采取行动，组织全校进行病毒检测，防止疫情进一步蔓延。对于TYR_04的行为，学校进行了严肃处理，决定追究其在此次事件中的责任。与此同时，漆树中学的医务室也成为了校内最忙碌的地方，医护人员开始为感染者提供治疗，并对全体学生进行健康监测。</p>
-<p><strong>四、反思与教训——疫情背后的责任与警觉</strong></p>
-<p>这一事件的发生，不仅暴露了TYR_04个人责任心的缺失，也让整个学校在防疫意识和应急响应能力方面存在的不足暴露无遗。虽然“04病毒”并非致命性疾病，但它却能迅速在人群中传播，给校园生活带来了极大的困扰。此次事件不仅让同学们对病毒的传播速度产生了深刻的认知，也提醒了每一个学生在日常生活中应保持警觉，及时发现并报告异常情况。</p>
-<p>对于学校而言，此事件的教训是深刻的。在面对突发疫情时，及时有效的管理和信息透明至关重要。学校应该加强学生的健康教育，提高防疫意识，确保类似事件不再发生。</p>
-<p><strong>结语：</strong></p>
-<p>漆树中学TYR_04无意中成为了“0号病人”，他的行为和病毒的快速传播引发了整个学校的广泛关注。虽然事件的发生让学校和学生们受到了很大的困扰，但也提醒了每个人，保持警觉、及时应对突发情况才是防范此类危机的根本。希望通过这次事件，大家能够更加注重自我保护，齐心协力共同应对可能的挑战。</p>
+          <p>某人做题，试图暴力卡过去，然后……<br><img src="https://cdn.luogu.com.cn/upload/image_hosting/n4yvuee8.png"></p>
+<p>这告诉我们，卡常，即使1ms，也要好好卡&#x2F;kl</p>
 
       
     </div>
@@ -689,7 +548,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/04/08/celeryixgxt/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/04/10/04bd/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -703,7 +562,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2025/04/08/celeryixgxt/" class="post-title-link" itemprop="url">Celery 与 GXT 的故事</a>
+            <a href="/2025/04/10/04bd/" class="post-title-link" itemprop="url">漆树中学OIER 04意外感染04病毒，引发恐慌</a>
         </h2>
 
         <div class="post-meta">
@@ -714,7 +573,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2025-04-08 20:21:56 / 修改时间：20:23:11" itemprop="dateCreated datePublished" datetime="2025-04-08T20:21:56+08:00">2025-04-08</time>
+              <time title="创建时间：2025-04-10 19:59:15 / 修改时间：19:58:49" itemprop="dateCreated datePublished" datetime="2025-04-10T19:59:15+08:00">2025-04-10</time>
             </span>
 
           
@@ -728,35 +587,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>在一个阳光明媚的秋日，校园里的梧桐树叶在微风中轻轻摇曳，地面上铺满了金黄的叶片。Celery坐在图书馆的阶梯上，手中捧着一本《追风筝的人》，眼神却时不时地飘向远处的花坛。他并不是在读书，而是在等一个人——GXT。</p>
-<p>GXT是他班上的同学，聪明、活泼、总是带着笑容，像是阳光下的一朵小花，温暖而又迷人。每当她经过他身边时，Celery的心跳都会不由自主地加速。他从不敢正面与她交谈，但每次她笑着对他说“你好”，他都会感觉自己的世界都亮了起来。</p>
-<p>这天，他们注定会有一场意外的相遇。GXT匆匆走出图书馆，手里还拿着几本书，像是匆忙完成了一次借书任务。她不小心踢到了一本掉落在地的书，低头弯腰去捡时，才注意到旁边坐着的Celery。</p>
-<p>“哦，Celery，没看到你在这儿，抱歉!” GXT有些不好意思地笑了笑。</p>
-<p>Celery愣了愣，抬起头，心跳剧烈：“没关系。”</p>
-<p>“你也喜欢看书吗？你总是坐在这里，我觉得你一定是个喜欢安静的人。”</p>
-<p>“嗯，”Celery稍微有些腼腆地回答，“其实我更喜欢看历史书，但今天想换换口味。”</p>
-<p>GXT眨了眨眼：“历史啊，那一定很有意思吧。不过，我更喜欢文学，尤其是小说。最近读了很多。”</p>
-<p>Celery好奇地看着她：“那你最喜欢的小说是什么？”</p>
-<p>GXT稍微停顿了一下，眼中闪烁着一丝光芒：“嗯……我最喜欢《追风筝的人》。”</p>
-<p>Celery心中一动，忍不住笑了笑：“这本书我也在看，真巧。”</p>
-<p>“真的吗？”GXT显得有些惊讶，“我以为你是个历史书迷呢。”</p>
-<p>Celery点了点头：“我也是。只是今天刚好想换点不一样的。”</p>
-<p>“那么，你觉得这本书怎么样？”GXT不由自主地坐到他旁边，想听他对这本书的看法。</p>
-<p>两人开始轻松地聊起了书中的人物和情节，讨论间，GXT的眼中流露出一丝认真与热情，而Celery则被她的气质和智慧深深吸引。他发现，和GXT在一起的每一刻，自己都能感受到一种从未有过的宁静和喜悦。</p>
-<p>随着时光的流逝，Celery和GXT的关系逐渐变得更加亲密。他们不仅分享书籍，还分享着彼此的梦想、心事和对未来的期望。每当课间，他们都会一起走在校园的小道上，谈论生活中的点滴，偶尔停下来，坐在长椅上，享受彼此的陪伴。</p>
-<p>然而，Celery内心始终有一个未解的心结——他不知道GXT是否对他有同样的感觉。尽管她对他总是那么温柔，谈笑风生，可他总觉得，自己只是她友善的朋友之一。</p>
-<p>某个夜晚，校园的操场上弯月如钩，Celery和GXT一起走过空旷的跑道。月光洒在他们的身上，空气中弥漫着秋天特有的清新。</p>
-<p>“GXT，有件事我一直没敢问你。”Celery停下脚步，低声说道。</p>
-<p>GXT转头看着他，温柔的眼神透着一点好奇：“什么事？”</p>
-<p>Celery犹豫了一下，终于鼓起勇气：“你……你对我是什么感觉？”</p>
-<p>GXT微微一愣，随即轻轻一笑：“我对你……当然是有感觉的。”</p>
-<p>Celery的心脏猛然跳动起来：“可是，你从来没有表现出来……”</p>
-<p>GXT伸手轻轻推了推他，脸上带着俏皮的笑意：“傻瓜，你不是早就知道吗？”</p>
-<p>Celery惊讶地看着她，那一瞬间，他终于明白，所有的犹豫和猜测都不过是自己不敢去面对的真相。</p>
-<p>GXT靠近了他，轻轻地握住了他的手：“我喜欢你，Celery。从我们第一次聊起书的那天起，我就知道，你和我不一样。”</p>
-<p>Celery的心情从未如此澎湃。他握紧她的手，眼中满是温柔与坚定：“我也是，GXT。从见到你的那一刻起，我就知道，你是我一直在寻找的那个人。”</p>
-<p>在那片秋夜的月光下，他们紧紧相拥，仿佛整个校园的世界都为他们而停滞。未来，充满了未知与挑战，但他们知道，彼此的陪伴就是最温暖的力量。</p>
-<p>从那以后，Celery和GXT的校园生活变得更加精彩。他们一起经历了考试的压力，假期的旅行，甚至是各自成长中的迷茫与痛苦，但始终不离不弃。爱情，像是那条校园的小径，静静延伸，最终汇入了他们共同的未来。</p>
+          <p><strong>零、引</strong></p>
+<p>在漆树中学，近日爆发了一起由“04病毒”引起的事件，主角是04，一名看似普通的学生。未曾想，他竟成为了这场突如其来的病毒传播的“源头”，而他自己却直到后来才意识到事情的严重性。04不仅成为了0号病人，还在短短三天内无意中传染了多名同学，引发了学校内部的恐慌与愤怒。</p>
+<p><strong>一、初始感染——一个无意的病毒源头</strong></p>
+<p>事情的开端十分普通。04原本只是漆树中学的一名普通学生，他参加了常规的学习和活动，生活看似平淡无奇。然而，不知从何时起，他在一次偶然的机会中感染了名为“04病毒”的病毒。据悉，这种病毒具有高度的传播性，但最初的症状非常轻微，类似感冒或过敏反应。04并没有过多在意，认为自己只是普通的生病，便没有及时就医。</p>
+<p><strong>二、病毒传播——不经意间的扩散</strong></p>
+<p>然而，问题并未就此结束。第一天，04并未意识到自己的病情有多严重，依旧照常上课、参加活动。他所在的机房是学校信息技术课程的学习场所，那里有着众多与他关系较好的同学。当时，他并没有特别注意到自己在无意中接触了周围的同学，也没有采取任何预防措施，继续与他们分享同一个学习空间。就这样，在一天内，他不经意间将病毒传染给了同机房的4名同学。</p>
+<p>到了第二天，病毒的传播效果更加明显。04的症状逐渐加重，但他依旧未曾自觉，并且并未采取隔离或就医措施。而他的4名同学也在短短24小时内迅速扩散病毒，他们又将病毒传染给了更多的同学。两天之后，感染人数已达到8人。到了第三天，感染人数突破了11人。病毒的传播速度让人瞠目结舌，学校的管理人员和师生们也开始感受到前所未有的压力。</p>
+<p><strong>三、引发愤怒——“0号病人”成了众矢之的</strong></p>
+<p>随着感染人数的增加，04渐渐引起了学校师生们的关注。他的病毒传播速度和范围令人震惊，而他自己却并未采取任何措施来阻止进一步扩散。学校的其他学生开始产生了强烈的不满和愤怒，他们指责04没有及时采取隔离，甚至在知晓自己感染后仍未向学校报告，这使得病毒迅速扩散，造成了不可控制的局面。</p>
+<p>在同学们的愤怒中，学校的管理层也开始高度重视此事，迅速采取行动，组织全校进行病毒检测，防止疫情进一步蔓延。对于04的行为，学校进行了严肃处理，决定追究其在此次事件中的责任。与此同时，漆树中学的医务室也成为了校内最忙碌的地方，医护人员开始为感染者提供治疗，并对全体学生进行健康监测。</p>
+<p><strong>四、反思与教训——疫情背后的责任与警觉</strong></p>
+<p>这一事件的发生，不仅暴露了04个人责任心的缺失，也让整个学校在防疫意识和应急响应能力方面存在的不足暴露无遗。虽然“04病毒”并非致命性疾病，但它却能迅速在人群中传播，给校园生活带来了极大的困扰。此次事件不仅让同学们对病毒的传播速度产生了深刻的认知，也提醒了每一个学生在日常生活中应保持警觉，及时发现并报告异常情况。</p>
+<p>对于学校而言，此事件的教训是深刻的。在面对突发疫情时，及时有效的管理和信息透明至关重要。学校应该加强学生的健康教育，提高防疫意识，确保类似事件不再发生。</p>
+<p><strong>结语：</strong></p>
+<p>漆树中学04无意中成为了“0号病人”，他的行为和病毒的快速传播引发了整个学校的广泛关注。虽然事件的发生让学校和学生们受到了很大的困扰，但也提醒了每个人，保持警觉、及时应对突发情况才是防范此类危机的根本。希望通过这次事件，大家能够更加注重自我保护，齐心协力共同应对可能的挑战。</p>
 
       
     </div>
@@ -807,7 +652,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-04-10 19:35:39" itemprop="dateModified" datetime="2025-04-10T19:35:39+08:00">2025-04-10</time>
+                <time title="修改时间：2025-04-10 19:58:49" itemprop="dateModified" datetime="2025-04-10T19:58:49+08:00">2025-04-10</time>
               </span>
 
           
@@ -824,30 +669,164 @@
           <h1 id="混乱的"><a href="#混乱的" class="headerlink" title="混乱的"></a>混乱的</h1><ul>
 <li>愚人节好玩吗？<img src="http://10.168.42.26/yrj.png" alt="愚人节好玩吗"></li>
 </ul>
-<h1 id="kindred1"><a href="#kindred1" class="headerlink" title="@kindred1"></a>@<a target="_blank" rel="noopener" href="https://luogu.com.cn/user/491276">kindred1</a></h1><ul>
+<h1 id="某教练"><a href="#某教练" class="headerlink" title="@某教练"></a>@<a target="_blank" rel="noopener" href="https://luogu.com.cn/user/???">某教练</a></h1><ul>
 <li>看大家补题比较辛苦，给大家加了15道题。</li>
-<li>我初二刚来巴蜀被虐的可惨了，和第一名差了整整5分。——@<a target="_blank" rel="noopener" href="https://luogu.com.cn/user/820888">nxd_oxm</a>投稿</li>
+<li>我初二刚来巴蜀被虐的可惨了，和第一名差了整整5分。——@<a target="_blank" rel="noopener" href="https://luogu.com.cn/user/???">???</a>投稿</li>
 <li>不要激（二声）动，不要一天到晚都在那里发情。</li>
 </ul>
-<h1 id="Annihilation-y"><a href="#Annihilation-y" class="headerlink" title="@Annihilation_y"></a>@<a target="_blank" rel="noopener" href="https://luogu.com.cn/user/549508">Annihilation_y</a></h1><ul>
+<h1 id=""><a href="#" class="headerlink" title="@???"></a>@<a target="_blank" rel="noopener" href="https://luogu.com.cn/user/???">???</a></h1><ul>
 <li>清明节都不让我们和家人们团聚一下吗？</li>
-<li>【@<a target="_blank" rel="noopener" href="https://luogu.com.cn/user/753211">qiuzijin2026</a>真名】，我喜欢你！</li>
+<li>【@<a target="_blank" rel="noopener" href="https://luogu.com.cn/user/???">???</a>真名】，我喜欢你！</li>
 </ul>
-<h1 id="CleverPenguin"><a href="#CleverPenguin" class="headerlink" title="@CleverPenguin"></a>@<a target="_blank" rel="noopener" href="https://luogu.com.cn/user/1000166">CleverPenguin</a></h1><ul>
+<h1 id="-1"><a href="#-1" class="headerlink" title="@???"></a>@<a target="_blank" rel="noopener" href="https://luogu.com.cn/user/???">???</a></h1><ul>
 <li>一个女生在守，一群男生在射（指操场上射门，但读起来奇奇怪怪的）。</li>
 <li>（教师里出现了蟑螂）蟑螂真应该禁止了，上次我在教室里看到，以为是别人嚼过的槟榔，捡起来吃了。没想到竟然是蟑螂。</li>
-<li>我是高败翔他老婆！！！</li>
+<li>我是***他老婆！！！</li>
 <li>性让，我要和你击剑！</li>
 </ul>
-<h1 id="nxd-oxm"><a href="#nxd-oxm" class="headerlink" title="@nxd_oxm"></a>@<a target="_blank" rel="noopener" href="https://luogu.com.cn/user/820888">nxd_oxm</a></h1><ul>
-<li>Ooj是猫娘！Ooj是猫娘！</li>
+<h1 id="nxd-oxm"><a href="#nxd-oxm" class="headerlink" title="@nxd_oxm"></a>@<a target="_blank" rel="noopener" href="https://luogu.com.cn/user/???">nxd_oxm</a></h1><ul>
+<li>&amp;&amp;&amp;是猫娘！&amp;&amp;&amp;是猫娘！</li>
 </ul>
-<h1 id="qiuzijin2026"><a href="#qiuzijin2026" class="headerlink" title="@qiuzijin2026"></a>@<a target="_blank" rel="noopener" href="https://luogu.com.cn/user/753211">qiuzijin2026</a></h1><ul>
+<h1 id="-2"><a href="#-2" class="headerlink" title="@???"></a>@<a target="_blank" rel="noopener" href="https://luogu.com.cn/user/???">???</a></h1><ul>
 <li>（教练进来的时候）性让我操你妈。</li>
-<li>【@<a target="_blank" rel="noopener" href="https://luogu.com.cn/user/549508">Annihilation_y</a>真名】，我喜欢你！</li>
+<li>【@<a target="_blank" rel="noopener" href="https://luogu.com.cn/user/???">???</a>真名】，我喜欢你！</li>
 </ul>
-<h1 id="作者本人"><a href="#作者本人" class="headerlink" title="@作者本人"></a>@<a target="_blank" rel="noopener" href="https://luogu.com.cn/user/1038334">作者本人</a></h1><ul>
-<li>验证码 <code>xgxt</code> 寄。@729hao</li>
+<h1 id="作者本人"><a href="#作者本人" class="headerlink" title="@作者本人"></a>@<a target="_blank" rel="noopener" href="https://luogu.com.cn/user/???">作者本人</a></h1><ul>
+<li>验证码 <code>xgxt</code> 寄。@???</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/04/01/mine_whk/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="wth2026">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wth2026's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2025/04/01/mine_whk/" class="post-title-link" itemprop="url">自八下开始的文化课成绩</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2025-04-01 14:30:00" itemprop="dateCreated datePublished" datetime="2025-04-01T14:30:00+08:00">2025-04-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-10 19:58:49" itemprop="dateModified" datetime="2025-04-10T19:58:49+08:00">2025-04-10</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="初中"><a href="#初中" class="headerlink" title="初中"></a>初中</h1><h2 id="八年级"><a href="#八年级" class="headerlink" title="八年级"></a>八年级</h2><h3 id="八年级下册"><a href="#八年级下册" class="headerlink" title="八年级下册"></a>八年级下册</h3><h4 id="月考"><a href="#月考" class="headerlink" title="月考"></a>月考</h4><ul>
+<li>分值表</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">总分</th>
+<th align="center">语文</th>
+<th align="center">数学</th>
+<th align="center">英语</th>
+<th align="center">物理</th>
+<th align="center">化学</th>
+<th align="center">政史</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>等级</strong></td>
+<td align="center">B</td>
+<td align="center">B</td>
+<td align="center">B</td>
+<td align="center">B</td>
+<td align="center">A</td>
+<td align="center">Nan</td>
+<td align="center">Nan</td>
+</tr>
+<tr>
+<td align="center"><strong>分数</strong></td>
+<td align="center">未知</td>
+<td align="center">未知</td>
+<td align="center">未知</td>
+<td align="center">未知</td>
+<td align="center">未知</td>
+<td align="center">Nan</td>
+<td align="center">Nan</td>
+</tr>
+<tr>
+<td align="center"><strong>排名</strong></td>
+<td align="center">未知</td>
+<td align="center">未知</td>
+<td align="center">未知</td>
+<td align="center">未知</td>
+<td align="center">未知</td>
+<td align="center">Nan</td>
+<td align="center">Nan</td>
+</tr>
+<tr>
+<td align="center"><strong>班级排名</strong></td>
+<td align="center">倒数前10&#x2F;80</td>
+<td align="center">未知</td>
+<td align="center">未知</td>
+<td align="center">未知</td>
+<td align="center">未知</td>
+<td align="center">Nan</td>
+<td align="center">Nan</td>
+</tr>
+<tr>
+<td align="center"><strong>信息排名</strong></td>
+<td align="center">14&#x2F;15</td>
+<td align="center">未知</td>
+<td align="center">未知</td>
+<td align="center">未知</td>
+<td align="center">未知</td>
+<td align="center">Nan</td>
+<td align="center">Nan</td>
+</tr>
+</tbody></table>
+<ul>
+<li>自我评价<br>综合这辈子都毁了<br>语文古诗文默写对一个<br>数学看错+粗心错三道选择&#x2F;填空<br>英语阅读错8道<br>物理伽利略写成加利掠，牛顿第一定律的别称写成牛一定律</li>
 </ul>
 
       
@@ -866,9 +845,6 @@
 
 
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
 
 
 
@@ -933,7 +909,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
